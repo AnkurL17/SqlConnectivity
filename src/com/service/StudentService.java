@@ -2,25 +2,84 @@ package com.service;
 
 import java.sql.SQLException;
 
-import com.domain.Student;
+import com.model.student.StudentModel;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Interface StudentService.
+ */
 public interface StudentService {
 
-  void save(Student student) throws SQLException;
+  /**
+   * Save.
+   *
+   * @param save the student
+   * @throws SQLException the SQL exception
+   */
+  void save(StudentModel student) throws SQLException;
 
-  void update(Student student) throws SQLException;
+  /**
+   * Update.
+   *
+   * @param update the student
+   * @throws SQLException the SQL exception
+   */
+  void update(StudentModel student) throws SQLException;
 
-  Student first() throws SQLException;
+  /**
+   * First.
+   *
+   * @return the first student
+   * @throws SQLException the SQL exception
+   */
+  StudentModel first() throws SQLException;
 
-  Student last() throws SQLException;
+  /**
+   * Last.
+   *
+   * @return the last student
+   * @throws SQLException the SQL exception
+   */
+  StudentModel last() throws SQLException;
 
-  Student next() throws SQLException;
+  /**
+   * Next.
+   *
+   * @return the next student
+   * @throws SQLException the SQL exception
+   */
+  StudentModel next() throws SQLException;
 
-  Student prev() throws SQLException;
+  /**
+   * Prev.
+   *
+   * @return the prev student
+   * @throws SQLException the SQL exception
+   */
+  StudentModel prev() throws SQLException;
 
-  Student search(String rollNo) throws SQLException;
+  /**
+   * Search.
+   *
+   * @param rollNo the roll no
+   * @return the student
+   * @throws SQLException the SQL exception
+   */
+  StudentModel search(String rollNo) throws SQLException;
 
-  Student delete(String rollNo) throws SQLException;
+  /**
+   * Delete.
+   *
+   * @param rollNo the roll no
+   * @return the student
+   * @throws SQLException the SQL exception
+   */
+  StudentModel delete(String rollNo) throws SQLException;
 
+  /**
+   * Sets the result set.
+   *
+   * @throws SQLException the SQL exception
+   */
   void setResultSet() throws SQLException;
 }
